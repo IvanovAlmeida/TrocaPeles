@@ -1,9 +1,6 @@
 from django.shortcuts import render
-from django.conf import settings
-from django.db.models.fields.files import ImageFieldFile, FileField
 from .models import Capa
 from .models import Mapa
-from var_dump import var_dump
 
 def home(request):
 
