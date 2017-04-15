@@ -1,12 +1,18 @@
 from django.shortcuts import render
+from django.conf import settings
+from django.db.models.fields.files import ImageFieldFile, FileField
 from .models import Capa
 from .models import Mapa
+from var_dump import var_dump
 
 def home(request):
 
-	capa = Capa.objects.get(ativo='1')
+	if Capa.objects.filter(ativo='1'):
+		capa = Capa.objects.get(ativo='1')
+	else:
+		capa = False
+	
 	alt  = "Capa TrocaPeles"
-
 	context = {
 		'titulo': 'Inicio',
 		'capa': capa,
@@ -17,14 +23,16 @@ def home(request):
 
 def mapa(request):
 
-	imagem = Mapa.objects.get(ativo='1')
-	alt = "Mapa de "+imagem.nome
-
-	print(imagem.imagem.url)
+	if Mapa.objects.filter(ativo='1'):
+		mapa = Mapa.objects.get(ativo='1')
+		alt = "Mapa de "+mapa.nome
+	else:
+		mapa = False
+		alt	= "Mapa"	
 
 	context = {
 		'titulo': 'Mapa',
-		'mapa': imagem,
+		'mapa': mapa,
 		'alt'	: alt,
 	}
 

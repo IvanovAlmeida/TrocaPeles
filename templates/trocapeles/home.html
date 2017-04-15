@@ -7,7 +7,11 @@
 	<div class="jumbotron">
 		<h1 class="display-3 text-center">TrocaPeles</h1>
 		<hr class="my-4">
+		{% if capa %}
 		<img src="{{capa.imagem.url}}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
+		{% else %}
+		<img src="{% static 'img/capatrocapeles.png' %}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
+		{% endif %}
 		<hr class="my-4">
 	  	<p class="lead">
 	  	- As lendas falam de um grande cavaleiro em sua alva armadura, que surgirá com a coragem e o poder necessário para livrar nosso mundo da destruição alada. O grande herói partiria até os confins da terra e derrotaria Etrom, a besta negra responsável pela hedionda destruição de 20 anos atr...
