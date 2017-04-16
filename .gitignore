@@ -1,6 +1,7 @@
 *.pyc
 __pycache__
 myvenv
+static_env/media_root/uploads
 db.sqlite3
 .DS_Store
 TrocaPeles.sublime-project
