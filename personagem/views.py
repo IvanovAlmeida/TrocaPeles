@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import Personagem, Capa
 
@@ -10,7 +10,7 @@ def index(request):
 		capa = False
 
 	if Personagem.objects.exists():
-		personagens = Personagem.objects.values('nome', 'nivel', 'jogador__username')
+		personagens = Personagem.objects.values('id', 'nome', 'nivel', 'jogador__username')
 
 	else:
 		personagens = False
@@ -23,3 +23,16 @@ def index(request):
 	}
 
 	return render(request, 'personagens/index.html', context)
+
+def view(request, id):
+	personagem = get_object_or_404(Personagem, id=id)
+	print(personagem)
+
+
+
+	context = {
+		'titulo' : personagem.nome,
+		'personagem': personagem
+	}
+
+	return render(request, 'personagens/view.html', context)

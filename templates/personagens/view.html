@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+	<div class="row">
+		
+		<div class="col-sm-12">
+			
+			<br>
+			
+			{% if personagem.imagem %}
+			<img src="{{personagem.imagem.url}}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block img-capa">
+			{% else %}
+			<img src="{% static 'img/capatrocapeles.png' %}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block img-capa">
+			{% endif %}
+			<br>
+			<h3 class=" text-center"><i class="fa fa-gamepad" aria-hidden="true"></i> Dados do personagem</h3>
+			<hr class="my-4">
+
+		</div>
+
+	</div>
+
+{% endblock %}

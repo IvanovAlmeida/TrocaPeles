@@ -21,11 +21,13 @@
 
 				<div class="table-responsive">
 					<table class="table table-hover text-center">
+
 						<tr>
 							<th class="text-center">Avatar</th>
 							<th class="text-center">Nome</th>
 							<th class="text-center">Nivel</th>
 							<th class="text-center">Jogador</th>
+							<th></th>
 						</tr>
 						
 						{% for personagem in personagens %}
@@ -34,8 +36,14 @@
 								<td>{{personagem.nome}}</td>
 								<td>{{personagem.nivel}}</td>
 								<td>{{personagem.jogador__username}}</td>
+								<td>
+									<a class="btn btn-primary btn-sm" href="{% url 'personagem_view' id=personagem.id %}" role="button">
+										<i class="fa fa-eye" aria-hidden="true"></i>
+									</a>
+								</td>
 							</tr>
 						{% endfor %}
+
 					</table>
 				</div>
 

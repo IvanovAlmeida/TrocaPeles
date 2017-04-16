@@ -26,7 +26,8 @@ urlpatterns = [
 	#GERAL
 	url(r'^$', trocapeles.home, name='trocapeles_home'),
 	url(r'^mapa/', trocapeles.mapa, name='trocapeles_mapa'),
-	#PERSONAGEM
+	#PERSONAGEM	
+	url(r'^personagens/view/(?P<id>[0-9]+)/$', personagem.view, name='personagem_view'),
 	url(r'^personagens/', personagem.index, name='personagens_index'),
 	#ADMIN
     url(r'^admin/', admin.site.urls),
