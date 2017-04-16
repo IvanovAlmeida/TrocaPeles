@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from var_dump import var_dump
 
 from .models import Personagem, Capa
 
