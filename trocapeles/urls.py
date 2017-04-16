@@ -20,10 +20,15 @@ from django.contrib import admin
 from django.views.static import serve
 
 from . import views as trocapeles
+from personagem import views as personagem
 
 urlpatterns = [
+	#GERAL
 	url(r'^$', trocapeles.home, name='trocapeles_home'),
 	url(r'^mapa/', trocapeles.mapa, name='trocapeles_mapa'),
+	#PERSONAGEM
+	url(r'^personagens/', personagem.index, name='personagens_index'),
+	#ADMIN
     url(r'^admin/', admin.site.urls),
 ]
 

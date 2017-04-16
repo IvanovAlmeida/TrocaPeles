@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+	
+	<div class="row">
+		<div class="col-sm-12">
+				
+			<h1 class="display-3 text-center">Personagens</h1>
+			<hr class="my-4">
+			{% if capa %}
+			<img src="{{capa.imagem.url}}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
+			{% else %}
+			<img src="{% static 'img/capatrocapeles.png' %}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
+			{% endif %}
+			<hr class="my-4">
+
+			<div class="table-responsive">
+				<table class="table table-hover text-center">
+					<tr>
+						<th class="text-center">Avatar</th>
+						<th class="text-center">Nome</th>
+						<th class="text-center">Nivel</th>
+						<th class="text-center">Jogador</th>
+					</tr>
+					{% for personagem in personagens %}
+						<tr>
+							<td>asd</td>
+							<td>{{personagem.nome}}</td>
+							<td>{{personagem.nivel}}</td>
+							<td>{{personagem.jogador__username}}</td>
+						</tr>
+					{% endfor %}
+				</table>
+			</div>
+
+		</div>
+	</div>
+
+{% endblock %}

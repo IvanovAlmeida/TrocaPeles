@@ -4,27 +4,31 @@
 
 {% block content %}  
 
-	<div class="jumbotron">
-		<h1 class="display-3 text-center">TrocaPeles</h1>
-		<hr class="my-4">
-		{% if capa %}
-		<img src="{{capa.imagem.url}}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
-		{% else %}
-		<img src="{% static 'img/capatrocapeles.png' %}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
-		{% endif %}
-		<hr class="my-4">
-	  	<p class="lead">
-	  	- As lendas falam de um grande cavaleiro em sua alva armadura, que surgirá com a coragem e o poder necessário para livrar nosso mundo da destruição alada. O grande herói partiria até os confins da terra e derrotaria Etrom, a besta negra responsável pela hedionda destruição de 20 anos atr...
-	  	</p>
-	  	<p class="lead">
-		- Basta dessa besteira! Por que você continua a ler esse tipo de coisa, garoto? Nosso grande herói está apodrecendo na capital junto da sua maldita irmã-esposa. Ele nunca pôde, e nunca poderá nos libertar de coisa alguma! Os deuses enviaram esses monstros pra limpar esse mundo, e não há ninguém que possa derrota-los. Agora me dê esse maldito livro - balbuciou o Velho Bill enquanto arrancava os livros das mãos do neto. - que eu vou tratar de garantir que você nunca mais possa lê-lo!
-		</p>
-		<p class="lead">
-		O pequeno Simas observou todo o trajeto do velho livro arremessado pelo salão até vê-lo cair em meio as chamas da modesta lareira. O livro logo pegou fogo, e Simas não controlou as lágrimas ao ver a ultima lembrança de seu pai se transformando em cinzas.
-		</p>
-		<p class="lead">
-		- É assim que acabaremos. - Disse o Velho Bill mostrando os poucos dentes que lhe restavam na tentativa de simular um sorriso - E rei nenhum vai conseguir impedir...
-		</p>
+	<div class="row">
+		<div class="col-sm-12 ">
+			
+			<h1 class="display-3 text-center">TrocaPeles</h1>
+			<hr class="my-4">
+			{% if capa %}
+			<img src="{{capa.imagem.url}}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
+			{% else %}
+			<img src="{% static 'img/capatrocapeles.png' %}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
+			{% endif %}
+			<hr class="my-4">
+		  	<p class="lead">
+		  	- As lendas falam de um grande cavaleiro em sua alva armadura, que surgirá com a coragem e o poder necessário para livrar nosso mundo da destruição alada. O grande herói partiria até os confins da terra e derrotaria Etrom, a besta negra responsável pela hedionda destruição de 20 anos atr...
+		  	</p>
+		  	<p class="lead">
+			- Basta dessa besteira! Por que você continua a ler esse tipo de coisa, garoto? Nosso grande herói está apodrecendo na capital junto da sua maldita irmã-esposa. Ele nunca pôde, e nunca poderá nos libertar de coisa alguma! Os deuses enviaram esses monstros pra limpar esse mundo, e não há ninguém que possa derrota-los. Agora me dê esse maldito livro - balbuciou o Velho Bill enquanto arrancava os livros das mãos do neto. - que eu vou tratar de garantir que você nunca mais possa lê-lo!
+			</p>
+			<p class="lead">
+			O pequeno Simas observou todo o trajeto do velho livro arremessado pelo salão até vê-lo cair em meio as chamas da modesta lareira. O livro logo pegou fogo, e Simas não controlou as lágrimas ao ver a ultima lembrança de seu pai se transformando em cinzas.
+			</p>
+			<p class="lead">
+			- É assim que acabaremos. - Disse o Velho Bill mostrando os poucos dentes que lhe restavam na tentativa de simular um sorriso - E rei nenhum vai conseguir impedir...
+			</p>
+
+		</div>
 	</div>
 	
 {% endblock %}   

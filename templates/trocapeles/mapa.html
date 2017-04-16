@@ -4,16 +4,20 @@
 
 {% block content %}
 
-	<div class="jumbotron">
-		<h1 class="display-3 text-center">Mapa<small class="text-muted"> {{mapa.nome}}</small></h1>
-		<hr class="my-4">
-		{% if mapa %}
-		<img src="{{mapa.imagem.url}}" alt="{{alt}}" id="mapa" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
-		{% else %}
-		<img src="{% static 'img/mapa.jpg' %}" alt="{{alt}}" id="mapa" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
-		{% endif %}
-		<hr class="my-4">
-	  	<p class="lead">
+	<div class="row">
+		<div class="col-sm-12">
+
+			<h1 class="display-3 text-center">Mapa<small class="text-muted"> {{mapa.nome}}</small></h1>
+			<hr class="my-4">
+			{% if mapa %}
+			<img src="{{mapa.imagem.url}}" alt="{{alt}}" id="mapa" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
+			{% else %}
+			<img src="{% static 'img/mapa.jpg' %}" alt="{{alt}}" id="mapa" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
+			{% endif %}
+			<hr class="my-4">
+		  	<p class="lead">
+		  	
+	  	</div>
 	</div>
 
 {% endblock %}
