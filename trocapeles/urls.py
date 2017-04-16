@@ -24,10 +24,10 @@ from personagem import views as personagem
 
 urlpatterns = [
 	#GERAL
-	url(r'^$', trocapeles.home, name='trocapeles_home'),
-	url(r'^mapa/', trocapeles.mapa, name='trocapeles_mapa'),
+	url(r'^$', trocapeles.home, name='trocapelesHome'),
+	url(r'^mapa/', trocapeles.mapa, name='trocapelesMapa'),
 	#PERSONAGEM
-	url(r'^personagens/', personagem.index, name='personagens_index'),
+	url(r'^personagens/', personagem.index, name='personagensIndex'),
 	#ADMIN
     url(r'^admin/', admin.site.urls),
 ]
