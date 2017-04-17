@@ -12,7 +12,7 @@
 			{% if capa %}
 			<img src="{{capa.imagem.url}}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block img-capa">
 			{% else %}
-			<img src="{% static 'img/capatrocapeles.png' %}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block img-capa">
+			<img src="{% static 'img/imagem_default.jpg' %}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block img-capa">
 			{% endif %}
 			<hr class="my-4">
 
@@ -23,7 +23,7 @@
 					<table class="table table-hover text-center table-hover">
 
 						<tr class="thead-inverse">
-							<th class="text-center">Avatar</th>
+							<!--<th class="text-center">Avatar</th>-->
 							<th class="text-center">Nome</th>
 							<th class="text-center">Nivel</th>
 							<th class="text-center">Jogador</th>
@@ -32,15 +32,17 @@
 						
 						{% for personagem in personagens %}
 							<tr>
+								<!--
 								<td>
 									<img class="avatar circle" src="{% static 'img/avatar_padrao.png' %}"></img>
 								</td>
+								-->
 								<td>{{personagem.nome}}</td>
 								<td>{{personagem.nivel}}</td>
 								<td>{{personagem.jogador__username}}</td>
 								<td>
 									<a class="btn btn-outline-secondary btn-sm" href="{% url 'personagem_view' id=personagem.id %}" role="button">
-										<i class="fa fa-eye" aria-hidden="true"></i>
+										VER
 									</a>
 								</td>
 							</tr>
