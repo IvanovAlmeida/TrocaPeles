@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404
-from var_dump import var_dump
 
 from .models import Personagem, Capa
 
