@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from var_dump import var_dump
 
 from .models import Personagem, Capa
 
@@ -26,9 +27,6 @@ def index(request):
 
 def view(request, id):
 	personagem = get_object_or_404(Personagem, id=id)
-	print(personagem)
-
-
 
 	context = {
 		'titulo' : personagem.nome,

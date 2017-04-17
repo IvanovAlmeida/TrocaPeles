@@ -21,6 +21,140 @@
 
 		</div>
 
+		<div class="col-sm-12">
+			<div class="card-columns">
+
+				<!-- Jogador -->
+				<div class="card">
+					<div class="card-block">
+						<h4 class="card-title">Jogador</h4>
+						<p class="card-text">
+							{{personagem.jogador.username|linebreaks}}
+						</p>
+					</div>
+				</div>
+
+				<!-- Personagem -->
+				<div class="card">
+					<div class="card-block">
+						<h4 class="card-title">Personagem</h4>
+						<p class="card-text">
+							{{personagem.nome|linebreaks}}
+						</p>
+					</div>
+				</div>
+
+				<!-- Alcunha -->
+				<div class="card">
+					<div class="card-block">
+						<h4 class="card-title">Alcunha</h4>
+						<p class="card-text">
+							{{personagem.alcunha|linebreaks}}
+						</p>
+					</div>
+				</div>	
+
+				<!-- Alcunha -->
+				<div class="card">
+					<div class="card-block">
+						<h4 class="card-title">Pontos</h4>
+						<p class="card-text">
+							{{personagem.pontos|linebreaks}}
+						</p>
+					</div>
+				</div>
+				<!-- Atributos -->
+				<div class="card ">
+					<div class="card-block">
+						<h4 class="card-title">Atributos</h4>
+						<p class="card-text">
+							{{personagem.atributos|linebreaks}}
+						</p>
+					</div>
+				</div>
+
+				<!-- Vantagens -->
+				<div class="card">
+					<div class="card-block">
+						<h4 class="card-title">Vantagens</h4>
+						<p class="card-text">
+							{{personagem.vantagens|linebreaks}}
+						</p>
+					</div>
+				</div>
+
+				<!-- Desvantagens -->
+				<div class="card">
+					<div class="card-block">
+						<h4 class="card-title">Desvantagens</h4>
+						<p class="card-text">
+							{{personagem.desvantagens|linebreaks}}
+						</p>
+					</div>
+				</div>
+
+				<!-- Perícias -->
+				<div class="card">
+					<div class="card-block">
+						<h4 class="card-title">Perícias</h4>
+						<p class="card-text">
+							{{personagem.pericias|linebreaks}}
+						</p>
+					</div>
+				</div>
+
+
+				{% if personagem.peculiaridade %}
+				<!-- Peculiaridade -->
+				<div class="card">
+					<div class="card-block">
+						<h4 class="card-title">Peculiaridade</h4>
+						<p class="card-text">
+							{{personagem.peculiaridade|linebreaks}}
+						</p>
+					</div>
+				</div>
+				{% endif %}
+
+				{% if personagem.controle_animais %}
+				<!-- Controle de Animais -->
+				<div class="card">
+					<div class="card-block">
+						<h4 class="card-title">Controle de Animais</h4>
+						<p class="card-text">
+							{{personagem.controle_animais|linebreaks}}
+						</p>
+					</div>
+				</div>
+				{% endif %}
+
+				{% if personagem.turkelva %}
+				<!-- Turkelva -->
+				<div class="card">
+					<div class="card-block">
+						<h4 class="card-title">Turkelva</h4>
+						<p class="card-text">
+							{{personagem.turkelva|linebreaks}}
+						</p>
+					</div>
+				</div>
+				{% endif %}
+
+				{% if personagem.magias %}
+				<!-- Magias -->
+				<div class="card">
+					<div class="card-block">
+						<h4 class="card-title">Magias</h4>
+						<p class="card-text">
+							{{personagem.magias|linebreaks}}
+						</p>
+					</div>
+				</div>
+				{% endif %}
+
+			</div>
+		</div>
+		
 	</div>
 
 {% endblock %}

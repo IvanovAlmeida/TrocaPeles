@@ -19,7 +19,7 @@
 
 		<!-- Bootstrap core CSS -->
 	    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-	    <link href="{% static 'css/custom-style.css' %}" rel="stylesheet">
+	    <!--<link href="{% static 'css/custom-style.css' %}" rel="stylesheet">-->
 
 		<script src="https://use.fontawesome.com/8ede01328b.js"></script>
 		
@@ -33,41 +33,34 @@
 
 	<body>
 
-		<nav class="navbar navbar-toggleable-md navbar-light navbar-inverse bg-inverse">
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<a class="navbar-brand" href="{% url 'trocapeles_home' %}" >TrocaPeles</a>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="{% url 'trocapeles_home' %}">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="{% url 'trocapeles_mapa' %}">Mapa</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="{% url 'personagens_index' %}">Personagens</a>
-					</li>
-				</ul>
+		<nav class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="{% url 'trocapeles_home' %}">TrocaPeles</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="{% url 'trocapeles_home' %}">Home</a></li>
+						<li><a href="{% url 'trocapeles_mapa' %}">Mapa</a></li>
+						<li><a href="{% url 'personagens_index' %}">Personagens</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
 			</div>
 		</nav>
+
+		<br>
 		
 		<div class="container">
-			{% block content %}
+			{% block content %}  
+
 			{% endblock %} 
 		</div>			
-
-		<br>
-		<br>
-
-		<footer class="footer navbar navbar-inverse bg-inverse bg-inverse">
-			<div class="container text-center">
-				<span class="text-muted ">Desenvolvido por <a href="https://github.com/IvanovAlmeida/TrocaPeles">Ivanov <i class="fa fa-github" aria-hidden="true"></i></a></span>
-			</div>
-		</footer>
-
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     	<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>

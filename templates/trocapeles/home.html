@@ -10,9 +10,9 @@
 			<h1 class="display-3 text-center">TrocaPeles</h1>
 			<hr class="my-4">
 			{% if capa %}
-			<img src="{{capa.imagem.url}}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
+			<img src="{{capa.imagem.url}}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block img-capa">
 			{% else %}
-			<img src="{% static 'img/capatrocapeles.png' %}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block">
+			<img src="{% static 'img/capatrocapeles.png' %}" alt="{{alt}}" class="rounded img-fluid mx-auto d-block img-capa">
 			{% endif %}
 			<hr class="my-4">
 		  	<p class="lead">
