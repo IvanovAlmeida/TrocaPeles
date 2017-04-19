@@ -37,6 +37,16 @@ img.avatar {
 	}
 }
 
+img.avatar {
+	padding: 1px;
+	width: 40px;
+	height: 40px;
+}
+
+img.circle {
+	border-radius: 50%;
+}
+
 /*
  * Footer
  */
@@ -47,4 +57,17 @@ img.avatar {
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #f5f5f5;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
 }
