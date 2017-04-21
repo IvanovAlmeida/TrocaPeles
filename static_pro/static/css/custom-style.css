@@ -19,6 +19,13 @@ body {
 	margin: 0 auto;
 }
 
+.img-mapa-default {
+	padding: 0px;
+	width: 40%;
+	height: 50%;
+	margin: 0 auto;
+}
+
 img.avatar {
 	padding: 1px;
 	width: 40px;
