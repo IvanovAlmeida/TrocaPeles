@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'trocapeles',
     'personagem',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +128,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static_pro', 'static'),
     os.path.join(BASE_DIR, 'static_pro', 'media')
 ]
+
+AUTH_USER_MODEL = 'account.User'

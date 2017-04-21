@@ -1,6 +1,5 @@
-from pprint import pprint
 from django.db import models
-from django.contrib.auth.models import User
+from account.models import User
 from django.core.files.storage import default_storage
 
 def user_directory_path(instace, filename):
@@ -55,14 +54,11 @@ class Personagem(models.Model):
 		verbose_name_plural = u'Personagens'
 
 	def save(self, *args, **kwargs):
-		pprint(self)
-		print(default_storage.exists(self.imagem))
 		if self.id:
 		 	old_img = Personagem.objects.get(id=self.id).imagem
 		 	default_storage.delete(old_img.path)
 			#os.remove(old_img.path)
 		elif default_storage.exists(self.imagem.path):
-			print(default_storage.exists(self.imagem))
 			default_storage.delete(self.imagem.path)
 
 		super(Personagem, self).save(*args, **kwargs)

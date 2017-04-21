@@ -10,7 +10,8 @@ def index(request):
 		capa = False
 
 	if Personagem.objects.exists():
-		personagens = Personagem.objects.values('id', 'nome', 'nivel', 'jogador__username')
+		#personagens = Personagem.objects.values('id', 'nome', 'nivel', 'jogador__username', 'jogador__imagem__url')
+		personagens = Personagem.objects.all()
 
 	else:
 		personagens = False
