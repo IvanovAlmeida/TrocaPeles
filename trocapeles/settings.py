@@ -56,7 +56,7 @@ ROOT_URLCONF = 'trocapeles.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates', 'TrocaPeles/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
