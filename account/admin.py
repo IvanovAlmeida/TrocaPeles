@@ -1,10 +1,22 @@
 from django.contrib import admin
-from .models import User
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from django.contrib.auth.models import User
 
-class UserAdmin(admin.ModelAdmin):
-	list_display = ['username', 'first_name', 'email', 'is_staff', 'is_active', 'date_joined', 'is_trusty']
-	list_editable = ['is_staff', 'is_active']
-	search_fields = ['nome', 'username', 'email']
-	list_filter = ['is_staff', 'is_active', 'is_trusty']
+from .models import Profile
 
+class ProfileInline(admin.StackedInline):
+	model = Profile
+	can_delete = False
+	verbose_name_plural = 'profiles'
+
+class UserAdmin(BaseUserAdmin):
+	inlines = (ProfileInline, )
+	list_display = ['username', 'email', 'first_name', 'last_name', 'is_staff']
+
+# class ProfileAdmin(admin.ModelAdmin):
+# 	list_display = ['nome', 'jogador', 'nivel', 'pontos']
+# 	list_editable = ['nivel', 'pontos']
+# 	search_fields = ['nome']
+
+admin.site.unregister(User)
 admin.site.register(User, UserAdmin)

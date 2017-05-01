@@ -5,7 +5,7 @@ def user_directory_path_mapa(instace, filename):
 
 def user_directory_path_capa(instace, filename):
 	return 'uploads/imagens/capa/{0}'.format(filename)
-
+	
 class Capa(models.Model):
 	id 		= models.AutoField(primary_key = True)
 	nome 	= models.CharField(max_length = 30)

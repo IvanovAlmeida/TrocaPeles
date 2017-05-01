@@ -1,5 +1,6 @@
 from django.db import models
-from account.models import User
+from account.models import Profile
+#from django.contrib.auth.models import User
 from django.core.files.storage import default_storage
 
 def user_directory_path(instace, filename):
@@ -47,7 +48,7 @@ class Personagem(models.Model):
 	turkelva			= models.TextField(blank = True, null = True)
 	magias				= models.TextField(blank = True, null = True)
 	imagem 				= models.ImageField(upload_to=user_directory_path)
-	jogador				= models.ForeignKey(User, blank = True, null = True, on_delete=models.CASCADE)
+	jogador				= models.ForeignKey(Profile, blank = True, null = True, on_delete=models.CASCADE)
 	
 	class Meta:
 		verbose_name = u'Personagem'

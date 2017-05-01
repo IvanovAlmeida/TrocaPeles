@@ -129,4 +129,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static_pro', 'media')
 ]
 
-AUTH_USER_MODEL = 'account.User'
+#AUTH_USER_MODEL = 'account.Profile'

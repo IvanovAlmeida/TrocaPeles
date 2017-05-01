@@ -34,12 +34,12 @@
 							<tr>
 								
 								<td>
-									<img class="avatar circle" src="{{ personagem.jogador.imagem.url }}"></img>
+									<img class="avatar circle" src="{{ personagem.jogador.avatar.url }}"></img>
 								</td>
 								
 								<td>{{personagem.nome}}</td>
 								<td>{{personagem.nivel}}</td>
-								<td>{{personagem.jogador.username}}</td>
+								<td>{{personagem.jogador.user.username}}</td>
 								<td>
 									<a class="btn btn-outline-secondary btn-sm" href="{% url 'personagem_view' id=personagem.id %}" role="button">
 										VER
